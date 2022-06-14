@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+    font-size: 2rem;
+} 
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background: #000138;
+    color: #f5f5f5;
+}
+
+.bg-dark {
+    background: #3d235a;
+}
+
+.bg-light {
+    background: #a99ab3
+}
+
+.bg-orange {
+    background: #ff9e0b
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid #f5f5f5;
+    box-shadow: 0 10px 30px 10px rgba(255,255,255,0.2);
+    overflow: hidden;  /* Show later how it removes overflow*/
+}
+
+.output {
+    padding:40px 20px;
+    text-align: right;
+}
+
+.row {
+    display: grid; 
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.button {
+    padding: 20px;
+    max-width: 25;
+    border: 0.1px solid #303030;
+    text-align: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+
+.row:last-child .button:first-child {
+    grid-column: 1 / span 2
+}
+
